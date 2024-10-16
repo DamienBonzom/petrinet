@@ -5,37 +5,38 @@ package petrinet;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Liens</b></em>'.
+ * A representation of the model object '<em><b>Lien</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link petrinet.Liens#getPredecesseur <em>Predecesseur</em>}</li>
- *   <li>{@link petrinet.Liens#getSuccesseur <em>Successeur</em>}</li>
- *   <li>{@link petrinet.Liens#isIs_read_arc <em>Is read arc</em>}</li>
+ *   <li>{@link petrinet.Lien#getPredecesseur <em>Predecesseur</em>}</li>
+ *   <li>{@link petrinet.Lien#getSuccesseur <em>Successeur</em>}</li>
+ *   <li>{@link petrinet.Lien#isIs_read_arc <em>Is read arc</em>}</li>
+ *   <li>{@link petrinet.Lien#getPoids <em>Poids</em>}</li>
  * </ul>
  *
- * @see petrinet.PetrinetPackage#getLiens()
+ * @see petrinet.PetrinetPackage#getLien()
  * @model
  * @generated
  */
-public interface Liens extends PetriElement {
+public interface Lien extends PetriElement {
 	/**
 	 * Returns the value of the '<em><b>Predecesseur</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Predecesseur</em>' reference.
 	 * @see #setPredecesseur(Zone)
-	 * @see petrinet.PetrinetPackage#getLiens_Predecesseur()
+	 * @see petrinet.PetrinetPackage#getLien_Predecesseur()
 	 * @model required="true"
 	 * @generated
 	 */
 	Zone getPredecesseur();
 
 	/**
-	 * Sets the value of the '{@link petrinet.Liens#getPredecesseur <em>Predecesseur</em>}' reference.
+	 * Sets the value of the '{@link petrinet.Lien#getPredecesseur <em>Predecesseur</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Predecesseur</em>' reference.
@@ -50,14 +51,14 @@ public interface Liens extends PetriElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Successeur</em>' reference.
 	 * @see #setSuccesseur(Zone)
-	 * @see petrinet.PetrinetPackage#getLiens_Successeur()
+	 * @see petrinet.PetrinetPackage#getLien_Successeur()
 	 * @model required="true"
 	 * @generated
 	 */
 	Zone getSuccesseur();
 
 	/**
-	 * Sets the value of the '{@link petrinet.Liens#getSuccesseur <em>Successeur</em>}' reference.
+	 * Sets the value of the '{@link petrinet.Lien#getSuccesseur <em>Successeur</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Successeur</em>' reference.
@@ -72,14 +73,14 @@ public interface Liens extends PetriElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is read arc</em>' attribute.
 	 * @see #setIs_read_arc(boolean)
-	 * @see petrinet.PetrinetPackage#getLiens_Is_read_arc()
+	 * @see petrinet.PetrinetPackage#getLien_Is_read_arc()
 	 * @model required="true"
 	 * @generated
 	 */
 	boolean isIs_read_arc();
 
 	/**
-	 * Sets the value of the '{@link petrinet.Liens#isIs_read_arc <em>Is read arc</em>}' attribute.
+	 * Sets the value of the '{@link petrinet.Lien#isIs_read_arc <em>Is read arc</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is read arc</em>' attribute.
@@ -88,4 +89,27 @@ public interface Liens extends PetriElement {
 	 */
 	void setIs_read_arc(boolean value);
 
-} // Liens
+	/**
+	 * Returns the value of the '<em><b>Poids</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Poids</em>' attribute.
+	 * @see #setPoids(int)
+	 * @see petrinet.PetrinetPackage#getLien_Poids()
+	 * @model default="1" required="true"
+	 * @generated
+	 */
+	int getPoids();
+
+	/**
+	 * Sets the value of the '{@link petrinet.Lien#getPoids <em>Poids</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Poids</em>' attribute.
+	 * @see #getPoids()
+	 * @generated
+	 */
+	void setPoids(int value);
+
+} // Lien

@@ -76,16 +76,16 @@ public class PetrinetAdapterFactory extends AdapterFactoryImpl {
 				return createPetriElementAdapter();
 			}
 			@Override
-			public Adapter casePlaces(Places object) {
-				return createPlacesAdapter();
+			public Adapter casePlace(Place object) {
+				return createPlaceAdapter();
 			}
 			@Override
-			public Adapter caseTransitions(Transitions object) {
-				return createTransitionsAdapter();
+			public Adapter caseTransition(Transition object) {
+				return createTransitionAdapter();
 			}
 			@Override
-			public Adapter caseLiens(Liens object) {
-				return createLiensAdapter();
+			public Adapter caseLien(Lien object) {
+				return createLienAdapter();
 			}
 			@Override
 			public Adapter caseZone(Zone object) {
@@ -140,44 +140,44 @@ public class PetrinetAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link petrinet.Places <em>Places</em>}'.
+	 * Creates a new adapter for an object of class '{@link petrinet.Place <em>Place</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see petrinet.Places
+	 * @see petrinet.Place
 	 * @generated
 	 */
-	public Adapter createPlacesAdapter() {
+	public Adapter createPlaceAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link petrinet.Transitions <em>Transitions</em>}'.
+	 * Creates a new adapter for an object of class '{@link petrinet.Transition <em>Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see petrinet.Transitions
+	 * @see petrinet.Transition
 	 * @generated
 	 */
-	public Adapter createTransitionsAdapter() {
+	public Adapter createTransitionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link petrinet.Liens <em>Liens</em>}'.
+	 * Creates a new adapter for an object of class '{@link petrinet.Lien <em>Lien</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see petrinet.Liens
+	 * @see petrinet.Lien
 	 * @generated
 	 */
-	public Adapter createLiensAdapter() {
+	public Adapter createLienAdapter() {
 		return null;
 	}
 

@@ -40,31 +40,31 @@ public interface PetrinetFactory extends EFactory {
 	PetriElement createPetriElement();
 
 	/**
-	 * Returns a new object of class '<em>Places</em>'.
+	 * Returns a new object of class '<em>Place</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Places</em>'.
+	 * @return a new object of class '<em>Place</em>'.
 	 * @generated
 	 */
-	Places createPlaces();
+	Place createPlace();
 
 	/**
-	 * Returns a new object of class '<em>Transitions</em>'.
+	 * Returns a new object of class '<em>Transition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Transitions</em>'.
+	 * @return a new object of class '<em>Transition</em>'.
 	 * @generated
 	 */
-	Transitions createTransitions();
+	Transition createTransition();
 
 	/**
-	 * Returns a new object of class '<em>Liens</em>'.
+	 * Returns a new object of class '<em>Lien</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Liens</em>'.
+	 * @return a new object of class '<em>Lien</em>'.
 	 * @generated
 	 */
-	Liens createLiens();
+	Lien createLien();
 
 	/**
 	 * Returns a new object of class '<em>Zone</em>'.

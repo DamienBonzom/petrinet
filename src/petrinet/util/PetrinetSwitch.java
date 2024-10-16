@@ -78,26 +78,26 @@ public class PetrinetSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PetrinetPackage.PLACES: {
-				Places places = (Places)theEObject;
-				T result = casePlaces(places);
-				if (result == null) result = caseZone(places);
-				if (result == null) result = casePetriElement(places);
+			case PetrinetPackage.PLACE: {
+				Place place = (Place)theEObject;
+				T result = casePlace(place);
+				if (result == null) result = caseZone(place);
+				if (result == null) result = casePetriElement(place);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PetrinetPackage.TRANSITIONS: {
-				Transitions transitions = (Transitions)theEObject;
-				T result = caseTransitions(transitions);
-				if (result == null) result = caseZone(transitions);
-				if (result == null) result = casePetriElement(transitions);
+			case PetrinetPackage.TRANSITION: {
+				Transition transition = (Transition)theEObject;
+				T result = caseTransition(transition);
+				if (result == null) result = caseZone(transition);
+				if (result == null) result = casePetriElement(transition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PetrinetPackage.LIENS: {
-				Liens liens = (Liens)theEObject;
-				T result = caseLiens(liens);
-				if (result == null) result = casePetriElement(liens);
+			case PetrinetPackage.LIEN: {
+				Lien lien = (Lien)theEObject;
+				T result = caseLien(lien);
+				if (result == null) result = casePetriElement(lien);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -143,47 +143,47 @@ public class PetrinetSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Places</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Place</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Places</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Place</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePlaces(Places object) {
+	public T casePlace(Place object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Transitions</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Transition</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Transitions</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Transition</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTransitions(Transitions object) {
+	public T caseTransition(Transition object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Liens</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Lien</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Liens</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Lien</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLiens(Liens object) {
+	public T caseLien(Lien object) {
 		return null;
 	}
 

@@ -9,13 +9,13 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import petrinet.Liens;
+import petrinet.Lien;
 import petrinet.Petri;
 import petrinet.PetriElement;
 import petrinet.PetrinetFactory;
 import petrinet.PetrinetPackage;
-import petrinet.Places;
-import petrinet.Transitions;
+import petrinet.Place;
+import petrinet.Transition;
 import petrinet.Zone;
 
 /**
@@ -44,21 +44,21 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass placesEClass = null;
+	private EClass placeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass transitionsEClass = null;
+	private EClass transitionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass liensEClass = null;
+	private EClass lienEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -183,8 +183,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getPlaces() {
-		return placesEClass;
+	public EClass getPlace() {
+		return placeEClass;
 	}
 
 	/**
@@ -193,8 +193,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPlaces_Nbr_jetons() {
-		return (EAttribute)placesEClass.getEStructuralFeatures().get(0);
+	public EAttribute getPlace_Nbr_jetons() {
+		return (EAttribute)placeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -203,8 +203,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getTransitions() {
-		return transitionsEClass;
+	public EClass getTransition() {
+		return transitionEClass;
 	}
 
 	/**
@@ -213,8 +213,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransitions_Est_possible() {
-		return (EAttribute)transitionsEClass.getEStructuralFeatures().get(0);
+	public EClass getLien() {
+		return lienEClass;
 	}
 
 	/**
@@ -223,8 +223,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getLiens() {
-		return liensEClass;
+	public EReference getLien_Predecesseur() {
+		return (EReference)lienEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -233,8 +233,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getLiens_Predecesseur() {
-		return (EReference)liensEClass.getEStructuralFeatures().get(0);
+	public EReference getLien_Successeur() {
+		return (EReference)lienEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -243,8 +243,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getLiens_Successeur() {
-		return (EReference)liensEClass.getEStructuralFeatures().get(1);
+	public EAttribute getLien_Is_read_arc() {
+		return (EAttribute)lienEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -253,8 +253,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLiens_Is_read_arc() {
-		return (EAttribute)liensEClass.getEStructuralFeatures().get(2);
+	public EAttribute getLien_Poids() {
+		return (EAttribute)lienEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -333,16 +333,16 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 		petriElementEClass = createEClass(PETRI_ELEMENT);
 		createEReference(petriElementEClass, PETRI_ELEMENT__PETRI);
 
-		placesEClass = createEClass(PLACES);
-		createEAttribute(placesEClass, PLACES__NBR_JETONS);
+		placeEClass = createEClass(PLACE);
+		createEAttribute(placeEClass, PLACE__NBR_JETONS);
 
-		transitionsEClass = createEClass(TRANSITIONS);
-		createEAttribute(transitionsEClass, TRANSITIONS__EST_POSSIBLE);
+		transitionEClass = createEClass(TRANSITION);
 
-		liensEClass = createEClass(LIENS);
-		createEReference(liensEClass, LIENS__PREDECESSEUR);
-		createEReference(liensEClass, LIENS__SUCCESSEUR);
-		createEAttribute(liensEClass, LIENS__IS_READ_ARC);
+		lienEClass = createEClass(LIEN);
+		createEReference(lienEClass, LIEN__PREDECESSEUR);
+		createEReference(lienEClass, LIEN__SUCCESSEUR);
+		createEAttribute(lienEClass, LIEN__IS_READ_ARC);
+		createEAttribute(lienEClass, LIEN__POIDS);
 
 		zoneEClass = createEClass(ZONE);
 		createEReference(zoneEClass, ZONE__PREDECESSEURS);
@@ -378,9 +378,9 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		placesEClass.getESuperTypes().add(this.getZone());
-		transitionsEClass.getESuperTypes().add(this.getZone());
-		liensEClass.getESuperTypes().add(this.getPetriElement());
+		placeEClass.getESuperTypes().add(this.getZone());
+		transitionEClass.getESuperTypes().add(this.getZone());
+		lienEClass.getESuperTypes().add(this.getPetriElement());
 		zoneEClass.getESuperTypes().add(this.getPetriElement());
 
 		// Initialize classes, features, and operations; add parameters
@@ -391,20 +391,20 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 		initEClass(petriElementEClass, PetriElement.class, "PetriElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPetriElement_Petri(), this.getPetri(), null, "petri", null, 1, 1, PetriElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(placesEClass, Places.class, "Places", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPlaces_Nbr_jetons(), ecorePackage.getEInt(), "nbr_jetons", null, 1, 1, Places.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPlace_Nbr_jetons(), ecorePackage.getEInt(), "nbr_jetons", null, 1, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(transitionsEClass, Transitions.class, "Transitions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTransitions_Est_possible(), ecorePackage.getEBoolean(), "est_possible", null, 1, 1, Transitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(liensEClass, Liens.class, "Liens", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLiens_Predecesseur(), this.getZone(), null, "predecesseur", null, 1, 1, Liens.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLiens_Successeur(), this.getZone(), null, "successeur", null, 1, 1, Liens.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLiens_Is_read_arc(), ecorePackage.getEBoolean(), "is_read_arc", null, 1, 1, Liens.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(lienEClass, Lien.class, "Lien", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLien_Predecesseur(), this.getZone(), null, "predecesseur", null, 1, 1, Lien.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLien_Successeur(), this.getZone(), null, "successeur", null, 1, 1, Lien.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLien_Is_read_arc(), ecorePackage.getEBoolean(), "is_read_arc", null, 1, 1, Lien.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLien_Poids(), ecorePackage.getEInt(), "poids", "1", 1, 1, Lien.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(zoneEClass, Zone.class, "Zone", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getZone_Predecesseurs(), this.getLiens(), null, "predecesseurs", null, 0, -1, Zone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getZone_Successeurs(), this.getLiens(), null, "successeurs", null, 0, -1, Zone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getZone_Predecesseurs(), this.getLien(), null, "predecesseurs", null, 0, -1, Zone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getZone_Successeurs(), this.getLien(), null, "successeurs", null, 0, -1, Zone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getZone_Nom_zone(), ecorePackage.getEString(), "nom_zone", null, 1, 1, Zone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

@@ -204,14 +204,14 @@ public interface PetrinetPackage extends EPackage {
 	int ZONE_OPERATION_COUNT = PETRI_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link petrinet.impl.PlacesImpl <em>Places</em>}' class.
+	 * The meta object id for the '{@link petrinet.impl.PlaceImpl <em>Place</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see petrinet.impl.PlacesImpl
-	 * @see petrinet.impl.PetrinetPackageImpl#getPlaces()
+	 * @see petrinet.impl.PlaceImpl
+	 * @see petrinet.impl.PetrinetPackageImpl#getPlace()
 	 * @generated
 	 */
-	int PLACES = 2;
+	int PLACE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Petri</b></em>' reference.
@@ -220,7 +220,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACES__PETRI = ZONE__PETRI;
+	int PLACE__PETRI = ZONE__PETRI;
 
 	/**
 	 * The feature id for the '<em><b>Predecesseurs</b></em>' reference list.
@@ -229,7 +229,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACES__PREDECESSEURS = ZONE__PREDECESSEURS;
+	int PLACE__PREDECESSEURS = ZONE__PREDECESSEURS;
 
 	/**
 	 * The feature id for the '<em><b>Successeurs</b></em>' reference list.
@@ -238,7 +238,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACES__SUCCESSEURS = ZONE__SUCCESSEURS;
+	int PLACE__SUCCESSEURS = ZONE__SUCCESSEURS;
 
 	/**
 	 * The feature id for the '<em><b>Nom zone</b></em>' attribute.
@@ -247,7 +247,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACES__NOM_ZONE = ZONE__NOM_ZONE;
+	int PLACE__NOM_ZONE = ZONE__NOM_ZONE;
 
 	/**
 	 * The feature id for the '<em><b>Nbr jetons</b></em>' attribute.
@@ -256,35 +256,35 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACES__NBR_JETONS = ZONE_FEATURE_COUNT + 0;
+	int PLACE__NBR_JETONS = ZONE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Places</em>' class.
+	 * The number of structural features of the '<em>Place</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLACES_FEATURE_COUNT = ZONE_FEATURE_COUNT + 1;
+	int PLACE_FEATURE_COUNT = ZONE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Places</em>' class.
+	 * The number of operations of the '<em>Place</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLACES_OPERATION_COUNT = ZONE_OPERATION_COUNT + 0;
+	int PLACE_OPERATION_COUNT = ZONE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link petrinet.impl.TransitionsImpl <em>Transitions</em>}' class.
+	 * The meta object id for the '{@link petrinet.impl.TransitionImpl <em>Transition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see petrinet.impl.TransitionsImpl
-	 * @see petrinet.impl.PetrinetPackageImpl#getTransitions()
+	 * @see petrinet.impl.TransitionImpl
+	 * @see petrinet.impl.PetrinetPackageImpl#getTransition()
 	 * @generated
 	 */
-	int TRANSITIONS = 3;
+	int TRANSITION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Petri</b></em>' reference.
@@ -293,7 +293,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITIONS__PETRI = ZONE__PETRI;
+	int TRANSITION__PETRI = ZONE__PETRI;
 
 	/**
 	 * The feature id for the '<em><b>Predecesseurs</b></em>' reference list.
@@ -302,7 +302,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITIONS__PREDECESSEURS = ZONE__PREDECESSEURS;
+	int TRANSITION__PREDECESSEURS = ZONE__PREDECESSEURS;
 
 	/**
 	 * The feature id for the '<em><b>Successeurs</b></em>' reference list.
@@ -311,7 +311,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITIONS__SUCCESSEURS = ZONE__SUCCESSEURS;
+	int TRANSITION__SUCCESSEURS = ZONE__SUCCESSEURS;
 
 	/**
 	 * The feature id for the '<em><b>Nom zone</b></em>' attribute.
@@ -320,44 +320,35 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITIONS__NOM_ZONE = ZONE__NOM_ZONE;
+	int TRANSITION__NOM_ZONE = ZONE__NOM_ZONE;
 
 	/**
-	 * The feature id for the '<em><b>Est possible</b></em>' attribute.
+	 * The number of structural features of the '<em>Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITIONS__EST_POSSIBLE = ZONE_FEATURE_COUNT + 0;
+	int TRANSITION_FEATURE_COUNT = ZONE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Transitions</em>' class.
+	 * The number of operations of the '<em>Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITIONS_FEATURE_COUNT = ZONE_FEATURE_COUNT + 1;
+	int TRANSITION_OPERATION_COUNT = ZONE_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Transitions</em>' class.
+	 * The meta object id for the '{@link petrinet.impl.LienImpl <em>Lien</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITIONS_OPERATION_COUNT = ZONE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link petrinet.impl.LiensImpl <em>Liens</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see petrinet.impl.LiensImpl
-	 * @see petrinet.impl.PetrinetPackageImpl#getLiens()
+	 * @see petrinet.impl.LienImpl
+	 * @see petrinet.impl.PetrinetPackageImpl#getLien()
 	 * @generated
 	 */
-	int LIENS = 4;
+	int LIEN = 4;
 
 	/**
 	 * The feature id for the '<em><b>Petri</b></em>' reference.
@@ -366,7 +357,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIENS__PETRI = PETRI_ELEMENT__PETRI;
+	int LIEN__PETRI = PETRI_ELEMENT__PETRI;
 
 	/**
 	 * The feature id for the '<em><b>Predecesseur</b></em>' reference.
@@ -375,7 +366,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIENS__PREDECESSEUR = PETRI_ELEMENT_FEATURE_COUNT + 0;
+	int LIEN__PREDECESSEUR = PETRI_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Successeur</b></em>' reference.
@@ -384,7 +375,7 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIENS__SUCCESSEUR = PETRI_ELEMENT_FEATURE_COUNT + 1;
+	int LIEN__SUCCESSEUR = PETRI_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Is read arc</b></em>' attribute.
@@ -393,26 +384,34 @@ public interface PetrinetPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIENS__IS_READ_ARC = PETRI_ELEMENT_FEATURE_COUNT + 2;
+	int LIEN__IS_READ_ARC = PETRI_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Liens</em>' class.
+	 * The feature id for the '<em><b>Poids</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIENS_FEATURE_COUNT = PETRI_ELEMENT_FEATURE_COUNT + 3;
+	int LIEN__POIDS = PETRI_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Liens</em>' class.
+	 * The number of structural features of the '<em>Lien</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIENS_OPERATION_COUNT = PETRI_ELEMENT_OPERATION_COUNT + 0;
+	int LIEN_FEATURE_COUNT = PETRI_ELEMENT_FEATURE_COUNT + 4;
 
+	/**
+	 * The number of operations of the '<em>Lien</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIEN_OPERATION_COUNT = PETRI_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link petrinet.Petri <em>Petri</em>}'.
@@ -468,89 +467,89 @@ public interface PetrinetPackage extends EPackage {
 	EReference getPetriElement_Petri();
 
 	/**
-	 * Returns the meta object for class '{@link petrinet.Places <em>Places</em>}'.
+	 * Returns the meta object for class '{@link petrinet.Place <em>Place</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Places</em>'.
-	 * @see petrinet.Places
+	 * @return the meta object for class '<em>Place</em>'.
+	 * @see petrinet.Place
 	 * @generated
 	 */
-	EClass getPlaces();
+	EClass getPlace();
 
 	/**
-	 * Returns the meta object for the attribute '{@link petrinet.Places#getNbr_jetons <em>Nbr jetons</em>}'.
+	 * Returns the meta object for the attribute '{@link petrinet.Place#getNbr_jetons <em>Nbr jetons</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nbr jetons</em>'.
-	 * @see petrinet.Places#getNbr_jetons()
-	 * @see #getPlaces()
+	 * @see petrinet.Place#getNbr_jetons()
+	 * @see #getPlace()
 	 * @generated
 	 */
-	EAttribute getPlaces_Nbr_jetons();
+	EAttribute getPlace_Nbr_jetons();
 
 	/**
-	 * Returns the meta object for class '{@link petrinet.Transitions <em>Transitions</em>}'.
+	 * Returns the meta object for class '{@link petrinet.Transition <em>Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Transitions</em>'.
-	 * @see petrinet.Transitions
+	 * @return the meta object for class '<em>Transition</em>'.
+	 * @see petrinet.Transition
 	 * @generated
 	 */
-	EClass getTransitions();
+	EClass getTransition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link petrinet.Transitions#isEst_possible <em>Est possible</em>}'.
+	 * Returns the meta object for class '{@link petrinet.Lien <em>Lien</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Est possible</em>'.
-	 * @see petrinet.Transitions#isEst_possible()
-	 * @see #getTransitions()
+	 * @return the meta object for class '<em>Lien</em>'.
+	 * @see petrinet.Lien
 	 * @generated
 	 */
-	EAttribute getTransitions_Est_possible();
+	EClass getLien();
 
 	/**
-	 * Returns the meta object for class '{@link petrinet.Liens <em>Liens</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Liens</em>'.
-	 * @see petrinet.Liens
-	 * @generated
-	 */
-	EClass getLiens();
-
-	/**
-	 * Returns the meta object for the reference '{@link petrinet.Liens#getPredecesseur <em>Predecesseur</em>}'.
+	 * Returns the meta object for the reference '{@link petrinet.Lien#getPredecesseur <em>Predecesseur</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Predecesseur</em>'.
-	 * @see petrinet.Liens#getPredecesseur()
-	 * @see #getLiens()
+	 * @see petrinet.Lien#getPredecesseur()
+	 * @see #getLien()
 	 * @generated
 	 */
-	EReference getLiens_Predecesseur();
+	EReference getLien_Predecesseur();
 
 	/**
-	 * Returns the meta object for the reference '{@link petrinet.Liens#getSuccesseur <em>Successeur</em>}'.
+	 * Returns the meta object for the reference '{@link petrinet.Lien#getSuccesseur <em>Successeur</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Successeur</em>'.
-	 * @see petrinet.Liens#getSuccesseur()
-	 * @see #getLiens()
+	 * @see petrinet.Lien#getSuccesseur()
+	 * @see #getLien()
 	 * @generated
 	 */
-	EReference getLiens_Successeur();
+	EReference getLien_Successeur();
 
 	/**
-	 * Returns the meta object for the attribute '{@link petrinet.Liens#isIs_read_arc <em>Is read arc</em>}'.
+	 * Returns the meta object for the attribute '{@link petrinet.Lien#isIs_read_arc <em>Is read arc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is read arc</em>'.
-	 * @see petrinet.Liens#isIs_read_arc()
-	 * @see #getLiens()
+	 * @see petrinet.Lien#isIs_read_arc()
+	 * @see #getLien()
 	 * @generated
 	 */
-	EAttribute getLiens_Is_read_arc();
+	EAttribute getLien_Is_read_arc();
+
+	/**
+	 * Returns the meta object for the attribute '{@link petrinet.Lien#getPoids <em>Poids</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Poids</em>'.
+	 * @see petrinet.Lien#getPoids()
+	 * @see #getLien()
+	 * @generated
+	 */
+	EAttribute getLien_Poids();
 
 	/**
 	 * Returns the meta object for class '{@link petrinet.Zone <em>Zone</em>}'.
@@ -663,14 +662,14 @@ public interface PetrinetPackage extends EPackage {
 		EReference PETRI_ELEMENT__PETRI = eINSTANCE.getPetriElement_Petri();
 
 		/**
-		 * The meta object literal for the '{@link petrinet.impl.PlacesImpl <em>Places</em>}' class.
+		 * The meta object literal for the '{@link petrinet.impl.PlaceImpl <em>Place</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see petrinet.impl.PlacesImpl
-		 * @see petrinet.impl.PetrinetPackageImpl#getPlaces()
+		 * @see petrinet.impl.PlaceImpl
+		 * @see petrinet.impl.PetrinetPackageImpl#getPlace()
 		 * @generated
 		 */
-		EClass PLACES = eINSTANCE.getPlaces();
+		EClass PLACE = eINSTANCE.getPlace();
 
 		/**
 		 * The meta object literal for the '<em><b>Nbr jetons</b></em>' attribute feature.
@@ -678,35 +677,27 @@ public interface PetrinetPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PLACES__NBR_JETONS = eINSTANCE.getPlaces_Nbr_jetons();
+		EAttribute PLACE__NBR_JETONS = eINSTANCE.getPlace_Nbr_jetons();
 
 		/**
-		 * The meta object literal for the '{@link petrinet.impl.TransitionsImpl <em>Transitions</em>}' class.
+		 * The meta object literal for the '{@link petrinet.impl.TransitionImpl <em>Transition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see petrinet.impl.TransitionsImpl
-		 * @see petrinet.impl.PetrinetPackageImpl#getTransitions()
+		 * @see petrinet.impl.TransitionImpl
+		 * @see petrinet.impl.PetrinetPackageImpl#getTransition()
 		 * @generated
 		 */
-		EClass TRANSITIONS = eINSTANCE.getTransitions();
+		EClass TRANSITION = eINSTANCE.getTransition();
 
 		/**
-		 * The meta object literal for the '<em><b>Est possible</b></em>' attribute feature.
+		 * The meta object literal for the '{@link petrinet.impl.LienImpl <em>Lien</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see petrinet.impl.LienImpl
+		 * @see petrinet.impl.PetrinetPackageImpl#getLien()
 		 * @generated
 		 */
-		EAttribute TRANSITIONS__EST_POSSIBLE = eINSTANCE.getTransitions_Est_possible();
-
-		/**
-		 * The meta object literal for the '{@link petrinet.impl.LiensImpl <em>Liens</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see petrinet.impl.LiensImpl
-		 * @see petrinet.impl.PetrinetPackageImpl#getLiens()
-		 * @generated
-		 */
-		EClass LIENS = eINSTANCE.getLiens();
+		EClass LIEN = eINSTANCE.getLien();
 
 		/**
 		 * The meta object literal for the '<em><b>Predecesseur</b></em>' reference feature.
@@ -714,7 +705,7 @@ public interface PetrinetPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LIENS__PREDECESSEUR = eINSTANCE.getLiens_Predecesseur();
+		EReference LIEN__PREDECESSEUR = eINSTANCE.getLien_Predecesseur();
 
 		/**
 		 * The meta object literal for the '<em><b>Successeur</b></em>' reference feature.
@@ -722,7 +713,7 @@ public interface PetrinetPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LIENS__SUCCESSEUR = eINSTANCE.getLiens_Successeur();
+		EReference LIEN__SUCCESSEUR = eINSTANCE.getLien_Successeur();
 
 		/**
 		 * The meta object literal for the '<em><b>Is read arc</b></em>' attribute feature.
@@ -730,7 +721,15 @@ public interface PetrinetPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LIENS__IS_READ_ARC = eINSTANCE.getLiens_Is_read_arc();
+		EAttribute LIEN__IS_READ_ARC = eINSTANCE.getLien_Is_read_arc();
+
+		/**
+		 * The meta object literal for the '<em><b>Poids</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LIEN__POIDS = eINSTANCE.getLien_Poids();
 
 		/**
 		 * The meta object literal for the '{@link petrinet.impl.ZoneImpl <em>Zone</em>}' class.

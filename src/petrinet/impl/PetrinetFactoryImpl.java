@@ -58,9 +58,9 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 		switch (eClass.getClassifierID()) {
 			case PetrinetPackage.PETRI: return createPetri();
 			case PetrinetPackage.PETRI_ELEMENT: return createPetriElement();
-			case PetrinetPackage.PLACES: return createPlaces();
-			case PetrinetPackage.TRANSITIONS: return createTransitions();
-			case PetrinetPackage.LIENS: return createLiens();
+			case PetrinetPackage.PLACE: return createPlace();
+			case PetrinetPackage.TRANSITION: return createTransition();
+			case PetrinetPackage.LIEN: return createLien();
 			case PetrinetPackage.ZONE: return createZone();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -95,9 +95,9 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 	 * @generated
 	 */
 	@Override
-	public Places createPlaces() {
-		PlacesImpl places = new PlacesImpl();
-		return places;
+	public Place createPlace() {
+		PlaceImpl place = new PlaceImpl();
+		return place;
 	}
 
 	/**
@@ -106,9 +106,9 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 	 * @generated
 	 */
 	@Override
-	public Transitions createTransitions() {
-		TransitionsImpl transitions = new TransitionsImpl();
-		return transitions;
+	public Transition createTransition() {
+		TransitionImpl transition = new TransitionImpl();
+		return transition;
 	}
 
 	/**
@@ -117,9 +117,9 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 	 * @generated
 	 */
 	@Override
-	public Liens createLiens() {
-		LiensImpl liens = new LiensImpl();
-		return liens;
+	public Lien createLien() {
+		LienImpl lien = new LienImpl();
+		return lien;
 	}
 
 	/**

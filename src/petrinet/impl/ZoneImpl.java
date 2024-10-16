@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import petrinet.Liens;
+import petrinet.Lien;
 import petrinet.PetrinetPackage;
 import petrinet.Zone;
 
@@ -42,7 +42,7 @@ public class ZoneImpl extends PetriElementImpl implements Zone {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Liens> predecesseurs;
+	protected EList<Lien> predecesseurs;
 
 	/**
 	 * The cached value of the '{@link #getSuccesseurs() <em>Successeurs</em>}' reference list.
@@ -52,7 +52,7 @@ public class ZoneImpl extends PetriElementImpl implements Zone {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Liens> successeurs;
+	protected EList<Lien> successeurs;
 
 	/**
 	 * The default value of the '{@link #getNom_zone() <em>Nom zone</em>}' attribute.
@@ -99,9 +99,9 @@ public class ZoneImpl extends PetriElementImpl implements Zone {
 	 * @generated
 	 */
 	@Override
-	public EList<Liens> getPredecesseurs() {
+	public EList<Lien> getPredecesseurs() {
 		if (predecesseurs == null) {
-			predecesseurs = new EObjectResolvingEList<Liens>(Liens.class, this, PetrinetPackage.ZONE__PREDECESSEURS);
+			predecesseurs = new EObjectResolvingEList<Lien>(Lien.class, this, PetrinetPackage.ZONE__PREDECESSEURS);
 		}
 		return predecesseurs;
 	}
@@ -112,9 +112,9 @@ public class ZoneImpl extends PetriElementImpl implements Zone {
 	 * @generated
 	 */
 	@Override
-	public EList<Liens> getSuccesseurs() {
+	public EList<Lien> getSuccesseurs() {
 		if (successeurs == null) {
-			successeurs = new EObjectResolvingEList<Liens>(Liens.class, this, PetrinetPackage.ZONE__SUCCESSEURS);
+			successeurs = new EObjectResolvingEList<Lien>(Lien.class, this, PetrinetPackage.ZONE__SUCCESSEURS);
 		}
 		return successeurs;
 	}
@@ -171,11 +171,11 @@ public class ZoneImpl extends PetriElementImpl implements Zone {
 		switch (featureID) {
 			case PetrinetPackage.ZONE__PREDECESSEURS:
 				getPredecesseurs().clear();
-				getPredecesseurs().addAll((Collection<? extends Liens>)newValue);
+				getPredecesseurs().addAll((Collection<? extends Lien>)newValue);
 				return;
 			case PetrinetPackage.ZONE__SUCCESSEURS:
 				getSuccesseurs().clear();
-				getSuccesseurs().addAll((Collection<? extends Liens>)newValue);
+				getSuccesseurs().addAll((Collection<? extends Lien>)newValue);
 				return;
 			case PetrinetPackage.ZONE__NOM_ZONE:
 				setNom_zone((String)newValue);

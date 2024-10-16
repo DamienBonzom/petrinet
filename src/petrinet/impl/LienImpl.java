@@ -9,26 +9,27 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import petrinet.Liens;
+import petrinet.Lien;
 import petrinet.PetrinetPackage;
 import petrinet.Zone;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Liens</b></em>'.
+ * An implementation of the model object '<em><b>Lien</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link petrinet.impl.LiensImpl#getPredecesseur <em>Predecesseur</em>}</li>
- *   <li>{@link petrinet.impl.LiensImpl#getSuccesseur <em>Successeur</em>}</li>
- *   <li>{@link petrinet.impl.LiensImpl#isIs_read_arc <em>Is read arc</em>}</li>
+ *   <li>{@link petrinet.impl.LienImpl#getPredecesseur <em>Predecesseur</em>}</li>
+ *   <li>{@link petrinet.impl.LienImpl#getSuccesseur <em>Successeur</em>}</li>
+ *   <li>{@link petrinet.impl.LienImpl#isIs_read_arc <em>Is read arc</em>}</li>
+ *   <li>{@link petrinet.impl.LienImpl#getPoids <em>Poids</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LiensImpl extends PetriElementImpl implements Liens {
+public class LienImpl extends PetriElementImpl implements Lien {
 	/**
 	 * The cached value of the '{@link #getPredecesseur() <em>Predecesseur</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -70,11 +71,31 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	protected boolean is_read_arc = IS_READ_ARC_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getPoids() <em>Poids</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPoids()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int POIDS_EDEFAULT = 1;
+
+	/**
+	 * The cached value of the '{@link #getPoids() <em>Poids</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPoids()
+	 * @generated
+	 * @ordered
+	 */
+	protected int poids = POIDS_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LiensImpl() {
+	protected LienImpl() {
 		super();
 	}
 
@@ -85,7 +106,7 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PetrinetPackage.Literals.LIENS;
+		return PetrinetPackage.Literals.LIEN;
 	}
 
 	/**
@@ -100,7 +121,7 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 			predecesseur = (Zone)eResolveProxy(oldPredecesseur);
 			if (predecesseur != oldPredecesseur) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.LIENS__PREDECESSEUR, oldPredecesseur, predecesseur));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.LIEN__PREDECESSEUR, oldPredecesseur, predecesseur));
 			}
 		}
 		return predecesseur;
@@ -125,7 +146,7 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 		Zone oldPredecesseur = predecesseur;
 		predecesseur = newPredecesseur;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.LIENS__PREDECESSEUR, oldPredecesseur, predecesseur));
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.LIEN__PREDECESSEUR, oldPredecesseur, predecesseur));
 	}
 
 	/**
@@ -140,7 +161,7 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 			successeur = (Zone)eResolveProxy(oldSuccesseur);
 			if (successeur != oldSuccesseur) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.LIENS__SUCCESSEUR, oldSuccesseur, successeur));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.LIEN__SUCCESSEUR, oldSuccesseur, successeur));
 			}
 		}
 		return successeur;
@@ -165,7 +186,7 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 		Zone oldSuccesseur = successeur;
 		successeur = newSuccesseur;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.LIENS__SUCCESSEUR, oldSuccesseur, successeur));
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.LIEN__SUCCESSEUR, oldSuccesseur, successeur));
 	}
 
 	/**
@@ -188,7 +209,30 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 		boolean oldIs_read_arc = is_read_arc;
 		is_read_arc = newIs_read_arc;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.LIENS__IS_READ_ARC, oldIs_read_arc, is_read_arc));
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.LIEN__IS_READ_ARC, oldIs_read_arc, is_read_arc));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int getPoids() {
+		return poids;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPoids(int newPoids) {
+		int oldPoids = poids;
+		poids = newPoids;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.LIEN__POIDS, oldPoids, poids));
 	}
 
 	/**
@@ -199,14 +243,16 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PetrinetPackage.LIENS__PREDECESSEUR:
+			case PetrinetPackage.LIEN__PREDECESSEUR:
 				if (resolve) return getPredecesseur();
 				return basicGetPredecesseur();
-			case PetrinetPackage.LIENS__SUCCESSEUR:
+			case PetrinetPackage.LIEN__SUCCESSEUR:
 				if (resolve) return getSuccesseur();
 				return basicGetSuccesseur();
-			case PetrinetPackage.LIENS__IS_READ_ARC:
+			case PetrinetPackage.LIEN__IS_READ_ARC:
 				return isIs_read_arc();
+			case PetrinetPackage.LIEN__POIDS:
+				return getPoids();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,14 +265,17 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PetrinetPackage.LIENS__PREDECESSEUR:
+			case PetrinetPackage.LIEN__PREDECESSEUR:
 				setPredecesseur((Zone)newValue);
 				return;
-			case PetrinetPackage.LIENS__SUCCESSEUR:
+			case PetrinetPackage.LIEN__SUCCESSEUR:
 				setSuccesseur((Zone)newValue);
 				return;
-			case PetrinetPackage.LIENS__IS_READ_ARC:
+			case PetrinetPackage.LIEN__IS_READ_ARC:
 				setIs_read_arc((Boolean)newValue);
+				return;
+			case PetrinetPackage.LIEN__POIDS:
+				setPoids((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -240,14 +289,17 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PetrinetPackage.LIENS__PREDECESSEUR:
+			case PetrinetPackage.LIEN__PREDECESSEUR:
 				setPredecesseur((Zone)null);
 				return;
-			case PetrinetPackage.LIENS__SUCCESSEUR:
+			case PetrinetPackage.LIEN__SUCCESSEUR:
 				setSuccesseur((Zone)null);
 				return;
-			case PetrinetPackage.LIENS__IS_READ_ARC:
+			case PetrinetPackage.LIEN__IS_READ_ARC:
 				setIs_read_arc(IS_READ_ARC_EDEFAULT);
+				return;
+			case PetrinetPackage.LIEN__POIDS:
+				setPoids(POIDS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -261,12 +313,14 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PetrinetPackage.LIENS__PREDECESSEUR:
+			case PetrinetPackage.LIEN__PREDECESSEUR:
 				return predecesseur != null;
-			case PetrinetPackage.LIENS__SUCCESSEUR:
+			case PetrinetPackage.LIEN__SUCCESSEUR:
 				return successeur != null;
-			case PetrinetPackage.LIENS__IS_READ_ARC:
+			case PetrinetPackage.LIEN__IS_READ_ARC:
 				return is_read_arc != IS_READ_ARC_EDEFAULT;
+			case PetrinetPackage.LIEN__POIDS:
+				return poids != POIDS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -283,8 +337,10 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (is_read_arc: ");
 		result.append(is_read_arc);
+		result.append(", poids: ");
+		result.append(poids);
 		result.append(')');
 		return result.toString();
 	}
 
-} //LiensImpl
+} //LienImpl

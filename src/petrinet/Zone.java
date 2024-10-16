@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Zone extends PetriElement {
 	/**
 	 * Returns the value of the '<em><b>Predecesseurs</b></em>' reference list.
-	 * The list contents are of type {@link petrinet.Liens}.
+	 * The list contents are of type {@link petrinet.Lien}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Predecesseurs</em>' reference list.
@@ -33,11 +33,11 @@ public interface Zone extends PetriElement {
 	 * @model
 	 * @generated
 	 */
-	EList<Liens> getPredecesseurs();
+	EList<Lien> getPredecesseurs();
 
 	/**
 	 * Returns the value of the '<em><b>Successeurs</b></em>' reference list.
-	 * The list contents are of type {@link petrinet.Liens}.
+	 * The list contents are of type {@link petrinet.Lien}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Successeurs</em>' reference list.
@@ -45,7 +45,7 @@ public interface Zone extends PetriElement {
 	 * @model
 	 * @generated
 	 */
-	EList<Liens> getSuccesseurs();
+	EList<Lien> getSuccesseurs();
 
 	/**
 	 * Returns the value of the '<em><b>Nom zone</b></em>' attribute.

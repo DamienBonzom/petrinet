@@ -9,48 +9,48 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import petrinet.PetrinetPackage;
-import petrinet.Transitions;
+import petrinet.Place;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Transitions</b></em>'.
+ * An implementation of the model object '<em><b>Place</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link petrinet.impl.TransitionsImpl#isEst_possible <em>Est possible</em>}</li>
+ *   <li>{@link petrinet.impl.PlaceImpl#getNbr_jetons <em>Nbr jetons</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TransitionsImpl extends ZoneImpl implements Transitions {
+public class PlaceImpl extends ZoneImpl implements Place {
 	/**
-	 * The default value of the '{@link #isEst_possible() <em>Est possible</em>}' attribute.
+	 * The default value of the '{@link #getNbr_jetons() <em>Nbr jetons</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isEst_possible()
+	 * @see #getNbr_jetons()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean EST_POSSIBLE_EDEFAULT = false;
+	protected static final int NBR_JETONS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #isEst_possible() <em>Est possible</em>}' attribute.
+	 * The cached value of the '{@link #getNbr_jetons() <em>Nbr jetons</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isEst_possible()
+	 * @see #getNbr_jetons()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean est_possible = EST_POSSIBLE_EDEFAULT;
+	protected int nbr_jetons = NBR_JETONS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TransitionsImpl() {
+	protected PlaceImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class TransitionsImpl extends ZoneImpl implements Transitions {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PetrinetPackage.Literals.TRANSITIONS;
+		return PetrinetPackage.Literals.PLACE;
 	}
 
 	/**
@@ -70,8 +70,8 @@ public class TransitionsImpl extends ZoneImpl implements Transitions {
 	 * @generated
 	 */
 	@Override
-	public boolean isEst_possible() {
-		return est_possible;
+	public int getNbr_jetons() {
+		return nbr_jetons;
 	}
 
 	/**
@@ -80,11 +80,11 @@ public class TransitionsImpl extends ZoneImpl implements Transitions {
 	 * @generated
 	 */
 	@Override
-	public void setEst_possible(boolean newEst_possible) {
-		boolean oldEst_possible = est_possible;
-		est_possible = newEst_possible;
+	public void setNbr_jetons(int newNbr_jetons) {
+		int oldNbr_jetons = nbr_jetons;
+		nbr_jetons = newNbr_jetons;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.TRANSITIONS__EST_POSSIBLE, oldEst_possible, est_possible));
+			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.PLACE__NBR_JETONS, oldNbr_jetons, nbr_jetons));
 	}
 
 	/**
@@ -95,8 +95,8 @@ public class TransitionsImpl extends ZoneImpl implements Transitions {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PetrinetPackage.TRANSITIONS__EST_POSSIBLE:
-				return isEst_possible();
+			case PetrinetPackage.PLACE__NBR_JETONS:
+				return getNbr_jetons();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,8 +109,8 @@ public class TransitionsImpl extends ZoneImpl implements Transitions {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PetrinetPackage.TRANSITIONS__EST_POSSIBLE:
-				setEst_possible((Boolean)newValue);
+			case PetrinetPackage.PLACE__NBR_JETONS:
+				setNbr_jetons((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,8 +124,8 @@ public class TransitionsImpl extends ZoneImpl implements Transitions {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PetrinetPackage.TRANSITIONS__EST_POSSIBLE:
-				setEst_possible(EST_POSSIBLE_EDEFAULT);
+			case PetrinetPackage.PLACE__NBR_JETONS:
+				setNbr_jetons(NBR_JETONS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -139,8 +139,8 @@ public class TransitionsImpl extends ZoneImpl implements Transitions {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PetrinetPackage.TRANSITIONS__EST_POSSIBLE:
-				return est_possible != EST_POSSIBLE_EDEFAULT;
+			case PetrinetPackage.PLACE__NBR_JETONS:
+				return nbr_jetons != NBR_JETONS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -155,10 +155,10 @@ public class TransitionsImpl extends ZoneImpl implements Transitions {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (est_possible: ");
-		result.append(est_possible);
+		result.append(" (nbr_jetons: ");
+		result.append(nbr_jetons);
 		result.append(')');
 		return result.toString();
 	}
 
-} //TransitionsImpl
+} //PlaceImpl
