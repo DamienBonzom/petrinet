@@ -49,10 +49,10 @@ public class ValidatePetriNet {
 	 */
 	private static void afficherResultat(ValidationResult resultat) {
 		afficherErreurs("- Petri", resultat.getRecordedErrorsFor(PetrinetPackage.PETRI));
-		afficherErreurs("- Liens", resultat.getRecordedErrorsFor(PetrinetPackage.LIENS));
+		afficherErreurs("- Liens", resultat.getRecordedErrorsFor(PetrinetPackage.LIEN));
 		afficherErreurs("- Zones", resultat.getRecordedErrorsFor(PetrinetPackage.ZONE));
-		afficherErreurs("- Transitions", resultat.getRecordedErrorsFor(PetrinetPackage.TRANSITIONS));
-		afficherErreurs("- Places", resultat.getRecordedErrorsFor(PetrinetPackage.PLACES));
+		afficherErreurs("- Transitions", resultat.getRecordedErrorsFor(PetrinetPackage.TRANSITION));
+		afficherErreurs("- Places", resultat.getRecordedErrorsFor(PetrinetPackage.PLACE));
 
 
 	}

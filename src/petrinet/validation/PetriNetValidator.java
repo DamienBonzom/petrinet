@@ -5,11 +5,11 @@ import java.util.stream.Stream;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 
-import petrinet.Liens;
+import petrinet.Lien;
 import petrinet.PetriElement;
 import petrinet.PetrinetPackage;
-import petrinet.Places;
-import petrinet.Transitions;
+import petrinet.Place;
+import petrinet.Transition;
 import petrinet.Zone;
 import petrinet.util.PetrinetSwitch;
 
@@ -104,7 +104,7 @@ public class PetriNetValidator extends PetrinetSwitch<Boolean> {
 	 * vers les classes parentes, le cas échéant)
 	 */
 	@Override
-	public Boolean caseLiens(Liens object) {
+	public Boolean caseLien(Lien object) {
 		// Contraintes sur Liens
 		//  Un lien ne peut pas lier une zone à elle-même
 		this.result.recordIfFailed(
@@ -112,18 +112,17 @@ public class PetriNetValidator extends PetrinetSwitch<Boolean> {
 				object,
 				"Le lien relie la zone " + object.getPredecesseur().getNom_zone() + " à elle-même");
 		
-		//  Il ne peut pas y avoir deux liens entre les mêmes zones
-		this.result.recordIfFailed(
-				object.getSuccesseur().getPredecesseurs().stream().count() <= 1, 
-				object, 
-				"Ce lien n'est pas unique.");
-		
 		// 	Un lien ne peut pas lier deux zones de même type
 		this.result.recordIfFailed(
 				!(object.getPredecesseur().getClass() == object.getSuccesseur().getClass()),
 				object,
 				"Un lien ne peut pas lier deux zones de même type" );
-		
+
+		//  Il ne peut pas y avoir deux liens entre les mêmes zones
+		this.result.recordIfFailed(
+				object.getPredecesseur().getSuccesseurs().stream().allMatch(l -> (l.equals(object)) || l.getSuccesseur() != object.getSuccesseur()), 
+				object, 
+				"Il y a deux liens ou plus entre" + object.getPredecesseur().getNom_zone() + " et" + object.getSuccesseur().getNom_zone() + ".");
 		
 		return null;
 	}
@@ -142,6 +141,7 @@ public class PetriNetValidator extends PetrinetSwitch<Boolean> {
 				object.getNom_zone() != null || object.getNom_zone().matches(IDENT_REGEX), 
 				object, 
 				"Le nom de la zone ne respecte pas les conventions Java");
+		
 		// 	Deux zones ne doivent pas avoir le même nom
 		this.result.recordIfFailed(
 				object.getPetri().getElements().stream()
@@ -154,7 +154,7 @@ public class PetriNetValidator extends PetrinetSwitch<Boolean> {
 	}
 
 	@Override
-	public Boolean casePlaces(Places object ) {
+	public Boolean casePlace(Place object ) {
 		// Contraintes sur Places
 		// 	Une place doit compter un nombre positif ou nul de jetons
 		this.result.recordIfFailed(
@@ -165,7 +165,7 @@ public class PetriNetValidator extends PetrinetSwitch<Boolean> {
 	}
 	
 	@Override
-	public Boolean caseTransitions(Transitions object) {
+	public Boolean caseTransition(Transition object) {
 		return null;
 	}
 	/**
