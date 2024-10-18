@@ -6,7 +6,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//PetriElement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PetriElement">
+  <eClassifiers xsi:type="ecore:EClass" name="PetriElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="petri" lowerBound="1" eType="#//Petri"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//Zone">
